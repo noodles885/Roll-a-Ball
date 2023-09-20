@@ -5,11 +5,12 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 5f;
-    private Rigidbody rb;
-    private float movementx;
-    private float movementy;
+    public float speed = 0;
 
+    private Rigidbody rb;
+
+    private float movementX;
+    private float movementY;
 
     // Start is called before the first frame update
     void Start()
@@ -17,20 +18,19 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    void OnMove(InputValue movementValue)
+    private void OnMove(InputValue movementValue)
     {
         Vector2 movementVector = movementValue.Get<Vector2>();
 
-        movementx = movementVector.x;
-        movementy = movementVector.y;
+        movementX = movementVector.x;
+        movementY = movementVector.y;
     }
 
-
-    void FixedUpdate()
+    private void FixedUpdate()
     {
-        Vector3 movement = new Vector3(movementx,0.0f, movementy);
+        Vector3 movement = new Vector3(movementX, 0.0f, movementY);
 
-        rb.AddForce(movement * speed); 
+        rb.AddForce(movement * speed);
     }
 
 }
