@@ -252,7 +252,7 @@ Transform:
   m_GameObject: {fileID: 155048127}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.8, y: 5.7, z: 0}
+  m_LocalPosition: {x: 1.8, y: 3.2, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -302,6 +302,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 25
+  vertspeed: 0
 --- !u!1 &203844586
 GameObject:
   m_ObjectHideFlags: 0
@@ -433,7 +434,7 @@ GameObject:
   - component: {fileID: 209133493}
   - component: {fileID: 209133492}
   m_Layer: 0
-  m_Name: Cube (2)
+  m_Name: WestWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -689,7 +690,7 @@ GameObject:
   - component: {fileID: 1788698289}
   - component: {fileID: 1788698288}
   m_Layer: 0
-  m_Name: Cube (3)
+  m_Name: EastWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -794,7 +795,7 @@ GameObject:
   - component: {fileID: 1802444070}
   - component: {fileID: 1802444069}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: NorthWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -899,7 +900,7 @@ GameObject:
   - component: {fileID: 1825281687}
   - component: {fileID: 1825281686}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: SouthWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
