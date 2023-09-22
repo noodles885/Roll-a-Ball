@@ -62,16 +62,12 @@ public class PlayerController : MonoBehaviour
         if (isGrounded && Input.GetKeyDown(KeyCode.Space))
         {
             
-            Jump();
+            rb.AddForce(jump * jumpForce);
+
             isGrounded = false;
         }
     }
 
-    void Jump()
-    {
-        // Apply an upward force to make the player jump
-        rb.AddForce(jump * jumpForce);
-    }
 
     void OnTriggerEnter(Collider other)
     {
