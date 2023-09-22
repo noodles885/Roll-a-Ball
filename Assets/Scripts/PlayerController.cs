@@ -40,7 +40,12 @@ public class PlayerController : MonoBehaviour
     public void SetCountText() {
 
         countText.text = "Points: " + count.ToString() + "/12";
+        if (count >= 12) {
 
+            winTextObject.SetActive(true);
+            Time.timeScale = 0f;
+            
+        }
 
     }
 
