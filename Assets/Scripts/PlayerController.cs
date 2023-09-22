@@ -3,57 +3,69 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
 
-    private Rigidbody rb; 
+    public float speed = 0;
+    public TextMeshProUGUI countText;
+    public GameObject winTextObject;
 
-
+    private Rigidbody rb;
+    private int count;
     private float movementX;
     private float movementY;
-
-
-    public float speed = 0; 
-
-
-   void Start()
-   {
-
+    
+    
+    void Start() {
+        
         rb = GetComponent<Rigidbody>();
-    }
- 
+        count = 0;
 
-    void OnMove(InputValue movementValue)
-    {
+        SetCountText();
+        winTextObject.SetActive(false);
+
+    }
+
+    void OnMove(InputValue movementValue) {
 
         Vector2 movementVector = movementValue.Get<Vector2>();
 
+        movementX = movementVector.x;
+        movementY = movementVector.y;
 
-        movementX = movementVector.x; 
-        movementY = movementVector.y; 
     }
 
+    public void SetCountText() {
 
-    private void FixedUpdate() 
-    {
-
-        Vector3 movement = new Vector3 (movementX, 0.0f, movementY);
+        countText.text = "Points: " + count.ToString() + "/12";
 
 
-        rb.AddForce(movement * speed); 
     }
 
-    void OnTriggerEnter(Collider other) 
-    {
- 
-        if (other.gameObject.CompareTag("PickUp")) 
-        {
- 
+    private void FixedUpdate() {
+        
+        Vector3 movement = new Vector3(movementX, 0.0f, movementY);
+
+        rb.AddForce(movement * speed);
+
+    }
+
+    void OnTriggerEnter(Collider other) {
+
+        if (other.gameObject.CompareTag("PickUp")) {
+
             other.gameObject.SetActive(false);
+            count ++;
+            SetCountText();
+
         }
         
 
     }
+
+
+
 
 }
