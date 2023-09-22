@@ -7,24 +7,24 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
 
- private Rigidbody rb; 
+    private Rigidbody rb; 
 
 
- private float movementX;
- private float movementY;
+    private float movementX;
+    private float movementY;
 
 
- public float speed = 0; 
+    public float speed = 0; 
 
 
- void Start()
-    {
+   void Start()
+   {
 
         rb = GetComponent<Rigidbody>();
     }
  
 
- void OnMove(InputValue movementValue)
+    void OnMove(InputValue movementValue)
     {
 
         Vector2 movementVector = movementValue.Get<Vector2>();
@@ -35,7 +35,7 @@ public class PlayerController : MonoBehaviour
     }
 
 
- private void FixedUpdate() 
+    private void FixedUpdate() 
     {
 
         Vector3 movement = new Vector3 (movementX, 0.0f, movementY);
@@ -44,15 +44,16 @@ public class PlayerController : MonoBehaviour
         rb.AddForce(movement * speed); 
     }
 
- void OnTriggerEnter(Collider other) 
+    void OnTriggerEnter(Collider other) 
     {
  
- if (other.gameObject.CompareTag("PickUp")) 
+        if (other.gameObject.CompareTag("PickUp")) 
         {
  
             other.gameObject.SetActive(false);
         }
-    }
+        
 
+    }
 
 }
