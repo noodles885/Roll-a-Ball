@@ -5,11 +5,13 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
 
+[RequireComponent(typeof(Rigidbody))]
 public class PlayerController : MonoBehaviour
 {
 
     public float speed = 0;
-    public float jumpForce = 5.0f; 
+    public Vector3 jump;
+    public float jumpForce = 2.0f; 
     public TextMeshProUGUI countText;
     public GameObject winTextObject;
 
@@ -25,7 +27,7 @@ public class PlayerController : MonoBehaviour
         count = 0;
         SetCountText();
         winTextObject.SetActive(false);
-        Vector3 jump = new Vector3(0.0f, 2.0f, 0.0f);
+        jump = new Vector3(0.0f, 2.0f, 0.0f);
     }
 
     void OnMove(InputValue movementValue)
@@ -44,17 +46,20 @@ public class PlayerController : MonoBehaviour
             Time.timeScale = 0f;
         }
     }
-
+    void OnCollisionStay()
+    {
+        isGrounded = true;
+    }
     private void FixedUpdate()
     {
-        Vector3 movement = new Vector3(movementX, 0.2f, movementY);
+        Vector3 movement = new Vector3(movementX, 0.0f, movementY);
 
         rb.AddForce(movement * speed);
 
         
-        isGrounded = true;
         
-        if (isGrounded && Keyboard.current.spaceKey.wasPressedThisFrame)
+        
+        if (isGrounded && Input.GetKeyDown(KeyCode.Space))
         {
             
             Jump();
@@ -65,7 +70,7 @@ public class PlayerController : MonoBehaviour
     void Jump()
     {
         // Apply an upward force to make the player jump
-        rb.AddForce(Jump * jumpForce, ForceMode.Impulse);
+        rb.AddForce(jump * jumpForce);
     }
 
     void OnTriggerEnter(Collider other)
