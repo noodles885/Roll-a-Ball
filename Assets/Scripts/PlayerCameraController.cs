@@ -33,8 +33,8 @@ public class PlayerCameraController : MonoBehaviour
             Vector3 moveDirection = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
             controller.Move(moveDirection.normalized * speed * Time.deltaTime);
         }
+
     }
 
-
-
 }
+

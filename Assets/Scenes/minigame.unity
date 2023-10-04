@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 155048130}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -201,7 +201,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 2, z: 0.7692308}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 723200735}
@@ -464,7 +464,7 @@ GameObject:
   - component: {fileID: 209133494}
   - component: {fileID: 209133493}
   - component: {fileID: 209133492}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WestWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -693,7 +693,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 339395672}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -717,6 +717,7 @@ Transform:
   - {fileID: 1788698291}
   - {fileID: 1825281689}
   - {fileID: 209133495}
+  - {fileID: 1899135829}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &590750555
@@ -1124,7 +1125,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 961739749}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.087245114, y: 0.000000034281545, z: -0.0000000030023453,
+  m_LocalRotation: {x: 0.087245114, y: -0.000000034281545, z: 0.0000000030023453,
     w: 0.9961869}
   m_LocalPosition: {x: 0, y: 4.447, z: -14}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -1237,7 +1238,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1547345454}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.087245114, y: 0.00000001714077, z: -0.0000000015011725, w: 0.9961869}
+  m_LocalRotation: {x: 0.087245114, y: -0.00000001714077, z: 0.0000000015011725, w: 0.9961869}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1393,7 +1394,7 @@ MonoBehaviour:
   controller: {fileID: 1680981252}
   cam: {fileID: 961739753}
   speed: 25
-  TurnSmooth: 5
+  TurnSmooth: 0.1
 --- !u!4 &1680981254
 Transform:
   m_ObjectHideFlags: 0
@@ -1404,7 +1405,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.447, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 0.5, z: 1.3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 155048132}
@@ -1422,7 +1423,7 @@ GameObject:
   - component: {fileID: 1788698290}
   - component: {fileID: 1788698289}
   - component: {fileID: 1788698288}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EastWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1527,7 +1528,7 @@ GameObject:
   - component: {fileID: 1802444071}
   - component: {fileID: 1802444070}
   - component: {fileID: 1802444069}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: NorthWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1632,7 +1633,7 @@ GameObject:
   - component: {fileID: 1825281688}
   - component: {fileID: 1825281687}
   - component: {fileID: 1825281686}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SouthWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1796,7 +1797,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1881263954}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.06915848, y: 0.000000004291296, z: -2.9749178e-10, w: 0.9976057}
+  m_LocalRotation: {x: 0.06915848, y: -0.000000004291296, z: 2.9749178e-10, w: 0.9976057}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1816,7 +1817,7 @@ GameObject:
   - component: {fileID: 1899135828}
   - component: {fileID: 1899135827}
   - component: {fileID: 1899135826}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1903,12 +1904,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1899135825}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 200.73074, y: 593.46954, z: -1055.1484}
   m_LocalScale: {x: 10, y: 1, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 339395672}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1917458542
 GameObject:
@@ -1999,6 +2000,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2002850379}
   - component: {fileID: 2002850378}
+  - component: {fileID: 2002850380}
   m_Layer: 0
   m_Name: Third person camera
   m_TagString: MainCamera
@@ -2129,14 +2131,43 @@ Transform:
   - {fileID: 1881263956}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2002850380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2002850377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e501d18bb52cf8c40b1853ca4904654f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CollideAgainst:
+    serializedVersion: 2
+    m_Bits: 8
+  m_IgnoreTag: Player
+  m_TransparentLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_MinimumDistanceFromTarget: 0.1
+  m_AvoidObstacles: 1
+  m_DistanceLimit: 0
+  m_MinimumOcclusionTime: 0
+  m_CameraRadius: 0.1
+  m_Strategy: 0
+  m_MaximumEffort: 4
+  m_SmoothingTime: 0
+  m_Damping: 0
+  m_DampingWhenOccluded: 0
+  m_OptimalTargetDistance: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 961739753}
   - {fileID: 203844589}
-  - {fileID: 1899135829}
   - {fileID: 339395672}
   - {fileID: 1571769921}
-  - {fileID: 2002850379}
   - {fileID: 1680981254}
+  - {fileID: 2002850379}
