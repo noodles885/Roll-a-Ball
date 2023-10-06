@@ -717,6 +717,7 @@ Transform:
   - {fileID: 1825281689}
   - {fileID: 209133495}
   - {fileID: 1899135829}
+  - {fileID: 1481826682}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &590750555
@@ -1952,17 +1953,9 @@ MonoBehaviour:
   m_Mesh: {fileID: 1695931855}
   m_VersionIndex: 1529
   m_IsSelectable: 1
-  m_SelectedFaces: 0e000000
-  m_SelectedEdges:
-  - a: 56
-    b: 57
-  - a: 58
-    b: 56
-  - a: 57
-    b: 59
-  - a: 59
-    b: 58
-  m_SelectedVertices: 38000000390000003a0000003b000000
+  m_SelectedFaces: 
+  m_SelectedEdges: []
+  m_SelectedVertices: 
 --- !u!4 &1481826682
 Transform:
   m_ObjectHideFlags: 0
@@ -1971,12 +1964,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1481826677}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -49.000008, y: 0, z: -51.000008}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 151.73074, y: 593.46954, z: -1106.1484}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 339395672}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1547345454
 GameObject:
@@ -3092,4 +3085,3 @@ SceneRoots:
   - {fileID: 1571769921}
   - {fileID: 1680981254}
   - {fileID: 2002850379}
-  - {fileID: 1481826682}
