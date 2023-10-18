@@ -2,39 +2,43 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerCameraController : MonoBehaviour
+//https://www.youtube.com/watch?v=UCwwn2q4Vys
+
+public class ThirdPersonController : MonoBehaviour
 {
-    public CharacterController controller;
-    public Transform cam;
-    public float speed = 6f;
-    float TurnSmoothTime = 0.01f;
-    public float TurnSmooth;
-    void Start()
-    {
+    [Header("References")]
+    public Transform orientation;
+    public Transform player;
+    public Transform playerObj;
+    public Rigidbody rb;
 
+    public float rotationSpeed;
+   
+    private void Start()
+    {
         Cursor.lockState = CursorLockMode.Locked;
-
+        Cursor.visible = false;
     }
 
-
-    // https://www.youtube.com/watch?v=4HpC--2iowE
-    void Update()
+    private void Update()
     {
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        float vertical = Input.GetAxisRaw("Vertical");
-        Vector3 direction = new Vector3 (horizontal, 0, vertical).normalized;
 
-        if (direction.magnitude >= 0.1f)
-        {
-            float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
-            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref TurnSmooth, TurnSmoothTime);
-            transform.rotation = Quaternion.Euler(0f, angle, 0f);
-            
-            Vector3 moveDirection = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
-            controller.Move(moveDirection.normalized * speed * Time.deltaTime);
-        }
+        // rotate orientation
+        Vector3 viewDir = player.position - new Vector3(transform.position.x, player.position.y, transform.position.z);
+        orientation.forward = viewDir.normalized;
+
+        // roate player object
+            float horizontalInput = Input.GetAxis("Horizontal");
+            float verticalInput = Input.GetAxis("Vertical");
+            Vector3 inputDir = orientation.forward * verticalInput + orientation.right * horizontalInput;
+
+            if (inputDir != Vector3.zero)
+                playerObj.forward = Vector3.Slerp(playerObj.forward, inputDir.normalized, Time.deltaTime * rotationSpeed);
+        
+
 
     }
+
 
 }
 
