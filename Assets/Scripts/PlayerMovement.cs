@@ -54,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
         MyInput();
         SpeedControl();
 
-        // handle drag
+        
         if (grounded)
             rb.drag = groundDrag;
         else
