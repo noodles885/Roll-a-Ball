@@ -6,6 +6,40 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
 
+    public static bool Paused = false;
+    public GameObject MainCanvas;
+    public GameObject OptionsMenu;
+
+    void Update()
+    {
+        
+        
+        
+        
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+
+            if (Paused)
+            {
+
+                OptionsMenu.SetActive(true);
+                MainCanvas.SetActive(false);
+                Paused = false;
+
+            }
+            else
+            {
+
+                OptionsMenu.SetActive(false);
+                MainCanvas.SetActive(true);
+                Paused = true;
+
+            }
+        }
+
+    }
+    
+
     public void Play()
     {
 

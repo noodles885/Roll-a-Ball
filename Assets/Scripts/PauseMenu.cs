@@ -46,7 +46,6 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 0f;
         Paused = true;
 
-
     }
 
     public void Play()
