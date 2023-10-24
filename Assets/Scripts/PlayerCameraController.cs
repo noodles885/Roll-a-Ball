@@ -32,6 +32,9 @@ public class PlayerCameraController : MonoBehaviour
         if (inputDir != Vector3.zero)
             playerObj.forward = Vector3.Slerp(playerObj.forward, inputDir.normalized, Time.deltaTime * rotationSpeed);
 
+
+
+
     }
 
 }
