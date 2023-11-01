@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
 
-public class PlayerController : MonoBehaviour
+public class PickupsCounter : MonoBehaviour
 {
     public TextMeshProUGUI countText;
     public GameObject winTextObject;
