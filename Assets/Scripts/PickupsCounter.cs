@@ -21,7 +21,7 @@ public class PickupsCounter : MonoBehaviour
         count = 0;
 
         SetCountText();
-        winTextObject.SetActive(false);
+        winTextObject.SetActive(true);
 
     }
 
